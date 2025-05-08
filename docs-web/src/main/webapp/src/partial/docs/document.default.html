@@ -110,6 +110,9 @@
     {{ 'document.default.latest_activity' | translate }}
   </h3>
   <audit-log logs="logs" />
+  <div class="audit-log-chart-container" style="margin-top: 20px; height: 300px;">
+    <audit-log-chart logs="logs" />
+  </div>
 </div>
 
 <div ui-view="file"></div>
