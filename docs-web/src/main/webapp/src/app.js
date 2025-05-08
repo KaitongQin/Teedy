@@ -1,3 +1,3 @@
-angular.module('app', [
-  'docs'
+angular.module('teedy', [
+  'teedy.docs'
 ]);
