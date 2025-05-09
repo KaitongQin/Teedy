@@ -14,7 +14,8 @@
     "password_lost_sent_title": "密码重置邮件已发送",
     "password_lost_sent_message": "重置密码的邮件已经发送至<strong>{{ username }}</strong>",
     "password_lost_error_title": "密码重置出错",
-    "password_lost_error_message": "无法发送密码重置邮件，请联系您的管理员进行手动重置"
+    "password_lost_error_message": "无法发送密码重置邮件，请联系您的管理员进行手动重置",
+    "register_request_btn": "注册新账号"
   },
   "passwordlost": {
     "title": "丢失密码",
@@ -26,6 +27,19 @@
     "submit": "更改我的密码",
     "error_title": "密码更改出错",
     "error_message": "您的密码恢复请求已过期，请在登录页面上提交新的请求"
+  },
+  "registerrequest": {
+    "title": "注册新账号",
+    "username": "用户名",
+    "email": "邮箱",
+    "password": "密码",
+    "submit": "提交",
+    "sent_title": "注册请求已提交",
+    "sent_message": "您的注册请求已提交，请等待管理员审核。",
+    "error_title": "注册失败",
+    "error_message": "注册请求提交失败，请稍后重试。",
+    "duplicate_username": "该用户名已被使用。",
+    "already_requested": "该用户名的注册请求正在审核中。"
   },
   "index": {
     "toggle_navigation": "切换导航",
@@ -253,6 +267,7 @@
       "username": "用户名",
       "create_date": "创建日期",
       "totp_enabled": "为该帐号启用双身份认证",
+      "requests": "用户请求",
       "edit": {
         "delete_user_title": "删除用户",
         "delete_user_message": "您是否确认删除该用户? 所有相关文档，文件和标签将被删除",

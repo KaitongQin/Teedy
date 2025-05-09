@@ -1,0 +1,2 @@
+create memory table T_USER_REQUEST ( USR_ID_C varchar(36) not null, USR_USERNAME_C varchar(50) not null, USR_EMAIL_C varchar(100) not null, USR_PASSWORD_C varchar(100) not null, USR_STATUS_C varchar(20) not null, USR_CREATEDATE_D datetime not null, primary key (USR_ID_C) );
+update T_CONFIG set CFG_VALUE_C = '32' where CFG_ID_C = 'DB_VERSION';

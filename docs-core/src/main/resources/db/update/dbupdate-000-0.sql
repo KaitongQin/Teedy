@@ -25,6 +25,7 @@ alter table T_DOCUMENT_TAG add constraint FK_DOT_IDDOCUMENT_C foreign key (DOT_I
 alter table T_DOCUMENT_TAG add constraint FK_DOT_IDTAG_C foreign key (DOT_IDTAG_C) references T_TAG (TAG_ID_C) on delete restrict on update restrict;
 alter table T_ROLE_BASE_FUNCTION add constraint FK_RBF_IDROLE_C foreign key (RBF_IDROLE_C) references T_ROLE (ROL_ID_C) on delete restrict on update restrict;
 alter table T_ROLE_BASE_FUNCTION add constraint FK_RBF_IDBASEFUNCTION_C foreign key (RBF_IDBASEFUNCTION_C) references T_BASE_FUNCTION (BAF_ID_C) on delete restrict on update restrict;
+alter table T_USER_REQUEST add constraint FK_USR_IDUSER_C foreign key (USR_IDUSER_C) references T_USER (USE_ID_C) on delete restrict on update restrict;
 
 create index IDX_DOC_TITLE_C on T_DOCUMENT (DOC_TITLE_C);
 create index IDX_DOC_CREATEDATE_D on T_DOCUMENT (DOC_CREATEDATE_D);

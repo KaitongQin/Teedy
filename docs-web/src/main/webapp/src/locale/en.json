@@ -14,7 +14,8 @@
     "password_lost_sent_title": "Password reset email sent",
     "password_lost_sent_message": "An email has been sent to <strong>{{ username }}</strong> to reset your password",
     "password_lost_error_title": "Password reset error",
-    "password_lost_error_message": "Unable to send a password reset email, please contact your administrator for a manual reset"
+    "password_lost_error_message": "Unable to send a password reset email, please contact your administrator for a manual reset",
+    "register_request_btn": "Register New Account"
   },
   "passwordlost": {
     "title": "Password lost",
@@ -26,6 +27,19 @@
     "submit": "Change my password",
     "error_title": "Error changing your password",
     "error_message": "Your password recovery request is expired, please ask for a new one on the login page"
+  },
+  "registerrequest": {
+    "title": "Register New Account",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit",
+    "sent_title": "Registration Request Submitted",
+    "sent_message": "Your registration request has been submitted. Please wait for admin approval.",
+    "error_title": "Registration Failed",
+    "error_message": "Failed to submit registration request. Please try again later.",
+    "duplicate_username": "This username is already taken.",
+    "already_requested": "A registration request for this username is already pending."
   },
   "index": {
     "toggle_navigation": "Toggle navigation",
@@ -301,6 +315,7 @@
       "username": "Username",
       "create_date": "Create date",
       "totp_enabled": "Two-factor authentication enabled for this account",
+      "requests": "User requests",
       "edit": {
         "delete_user_title": "Delete user",
         "delete_user_message": "Do you really want to delete this user? All associated documents, files and tags will be deleted",

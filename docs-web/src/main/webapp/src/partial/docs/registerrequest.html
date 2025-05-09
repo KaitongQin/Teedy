@@ -1,0 +1,25 @@
+<form name="form" novalidate>
+  <div class="modal-header">
+    <h3>{{ 'registerrequest.title' | translate }}</h3>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>{{ 'registerrequest.username' | translate }}</label>
+      <input name="username" class="form-control" type="text" required ng-model="data.username" />
+    </div>
+    <div class="form-group">
+      <label>{{ 'registerrequest.email' | translate }}</label>
+      <input name="email" class="form-control" type="email" required ng-model="data.email" />
+    </div>
+    <div class="form-group">
+      <label>{{ 'registerrequest.password' | translate }}</label>
+      <input name="password" class="form-control" type="password" required ng-model="data.password" ng-minlength="8" />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button ng-click="close(data)" class="btn btn-primary" ng-disabled="!form.$valid">
+      <span class="fas fa-user-plus"></span> {{ 'registerrequest.submit' | translate }}
+    </button>
+    <button ng-click="close(null)" class="btn btn-default">{{ 'cancel' | translate }}</button>
+  </div>
+</form>

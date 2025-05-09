@@ -75,4 +75,31 @@ angular.module('docs').controller('Login', function(Restangular, $scope, $rootSc
       });
     });
   };
+
+  // 注册请求
+  $scope.openRegisterRequest = function () {
+    $uibModal.open({
+      templateUrl: 'partial/docs/registerrequest.html',
+      controller: 'ModalRegisterRequest'
+    }).result.then(function (data) {
+      if (!data) return;
+      // 发送注册请求
+      Restangular.allUrl('register_request', '/docs-web/api/register_request').post(data).then(function () {
+        var title = $translate.instant('registerrequest.sent_title');
+        var msg = $translate.instant('registerrequest.sent_message');
+        var btns = [{result: 'ok', label: $translate.instant('ok'), cssClass: 'btn-primary'}];
+        $dialog.messageBox(title, msg, btns);
+      }, function (e) {
+        var title = $translate.instant('registerrequest.error_title');
+        var msg = $translate.instant('registerrequest.error_message');
+        if (e.data && e.data.type === 'AlreadyExistingUsername') {
+          msg = $translate.instant('registerrequest.duplicate_username');
+        } else if (e.data && e.data.type === 'AlreadyRequested') {
+          msg = $translate.instant('registerrequest.already_requested');
+        }
+        var btns = [{result: 'ok', label: $translate.instant('ok'), cssClass: 'btn-primary'}];
+        $dialog.messageBox(title, msg, btns);
+      });
+    });
+  };
 });

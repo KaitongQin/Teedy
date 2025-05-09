@@ -1,0 +1,24 @@
+<!-- 展示pending用户请求，管理员可同意 -->
+<h2>待审核用户请求</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>用户名</th>
+      <th>邮箱</th>
+      <th>状态</th>
+      <th>申请时间</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="req in requests | filter:{status:'pending'}">
+      <td>{{ req.username }}</td>
+      <td>{{ req.email }}</td>
+      <td>{{ req.status }}</td>
+      <td>{{ req.create_date | date:'yyyy-MM-dd HH:mm' }}</td>
+      <td>
+        <button class="btn btn-success btn-xs" ng-click="accept(req)" ng-disabled="req.status !== 'pending'">同意</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
