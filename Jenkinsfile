@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 checkout scmGit(
-                    branches: [[name: '*/master']],
+                    branches: [[name: '*/register-new-user']],
                     userRemoteConfigs: [[url: 'https://github.com/KaitongQin/Teedy.git']] // Your GitHub repo
                 )
                 sh 'mvn -B -DskipTests clean package' // Build with Maven
